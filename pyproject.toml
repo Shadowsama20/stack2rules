@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stack2rules"
+version = "1.0.0"
+description = "Generate private, stack-specific CLAUDE.md rules from project manifests."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Godwin Unomah"}]
+keywords = ["claude", "developer-tools", "cli", "project-context"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development",
+]
+
+[project.scripts]
+stack2rules = "stack2rules.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Shadowsama20/stack2rules"
+Issues = "https://github.com/Shadowsama20/stack2rules/issues"
+Changelog = "https://github.com/Shadowsama20/stack2rules/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false

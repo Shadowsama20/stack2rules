@@ -1,0 +1,7 @@
+[project]
+name = "stack2rules-django-fixture"
+version = "0.0.0"
+dependencies = ["Django>=4", "pandas"]
+
+[dependency-groups]
+test = ["pytest"]

@@ -1,0 +1,6 @@
+{
+  "name": "stack2rules-fullstack-fixture",
+  "private": true,
+  "dependencies": {"react": "*"},
+  "devDependencies": {"typescript": "*", "vitest": "*"}
+}

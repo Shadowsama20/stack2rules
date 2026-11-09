@@ -1,0 +1,13 @@
+{
+  "name": "stack2rules-nextjs-fixture",
+  "private": true,
+  "dependencies": {
+    "next": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "tailwindcss": "*",
+    "typescript": "*"
+  }
+}
