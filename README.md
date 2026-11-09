@@ -3,8 +3,9 @@
 Generate a stack-specific `CLAUDE.md` by running one command in a project root.
 No prompts, accounts, API calls, telemetry, or runtime dependencies.
 
-**Release status:** source published on GitHub; the first tagged release and
-PyPI publication are pending. This is an independent community tool, not an Anthropic product.
+**Release status:** [v1.0.0 is available](https://github.com/Shadowsama20/stack2rules/releases/tag/v1.0.0)
+with an installable wheel and source archive. PyPI publication is pending.
+This is an independent community tool, not an Anthropic product.
 See the [validation record](VALIDATION.md) for checks actually run.
 
 Start with the [examples](examples/README.md), [contribution guide](CONTRIBUTING.md)

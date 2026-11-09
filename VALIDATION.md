@@ -15,10 +15,18 @@ Checked on 2026-11-09 using Python 3.12.14 on Linux.
 | Clean virtual-environment wheel installation | Passed without dependency downloads |
 | CLI from the installed wheel | Generated expected FastAPI and Pandas sections |
 
-The GitHub Actions workflow targets Python 3.11–3.14 on Linux, macOS and
-Windows. These hosted runs have not been executed during release preparation;
-their results must be checked on the repository's Actions page. No tagged release,
-PyPI publication, download count or external adoption is claimed.
+## Published release verification
+
+The [release CI run](https://github.com/Shadowsama20/stack2rules/actions/runs/42645436441)
+passed all 12 jobs on Python 3.11–3.14 across Linux, macOS and Windows,
+including the PowerShell demo on Windows. The user also reported that the
+interactive PowerShell test passed on their own PC; this is user-reported evidence.
+
+The [release workflow](https://github.com/Shadowsama20/stack2rules/actions/runs/42645603396)
+successfully built, verified and published v1.0.0 from commit
+`a323fe8f01d8ebcefafe3938dacbd5d052c0ca25`. The tag points to that tested commit.
+The release includes a wheel, source distribution and SHA256SUMS.txt.
+PyPI publication, download counts and external adoption are not claimed.
 
 CI action pins were verified against upstream release pages:
 

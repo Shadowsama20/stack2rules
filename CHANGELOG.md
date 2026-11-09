@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 — source published, tagged release pending
+## 1.0.0 — 2026-11-09
 
 - Detect supported Node.js and Python technologies from root-level manifests.
 - Generate deterministic, framework-specific `CLAUDE.md` guidance offline.
@@ -9,4 +9,5 @@
 - Include an MIT license, contribution guide, CLI regression tests, reproducible
   examples and a GitHub Actions test/build workflow.
 
-No public release date, downstream adoption or registry publication is claimed.
+GitHub release published with a wheel, source archive and checksums.
+PyPI publication and downstream adoption are not claimed.
