@@ -1,0 +1,45 @@
+name: Publish v1.0.0 to PyPI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/pypi.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pypi-v1.0.0
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: pypi
+      url: https://pypi.org/project/stack2rules/
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Download tested v1.0.0 packages
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release download v1.0.0 --dir dist \
+            --pattern 'stack2rules-1.0.0-py3-none-any.whl' \
+            --pattern 'stack2rules-1.0.0.tar.gz'
+      - name: Verify the exact release assets
+        run: |
+          cd dist
+          echo '8c8bc4f82927eb2501ae156653b414b2200ff15ae0a53f97f036c3308e98b84a  stack2rules-1.0.0-py3-none-any.whl' | sha256sum --check
+          echo '5c89ff5febd33a3ce8ce2b4ae6045e8b09a739fe11f9beef8dec430c35e09b34  stack2rules-1.0.0.tar.gz' | sha256sum --check
+      - name: Publish to PyPI with Trusted Publishing
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
+        with:
+          packages-dir: dist/
+          print-hash: true
