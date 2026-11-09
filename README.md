@@ -44,6 +44,11 @@ filename to review changes or move the previous file before regeneration.
 
 ## See the result
 
+For the mixed-stack PowerShell test (13 technology sections plus overwrite
+protection), run `& .\scripts\test-demo.ps1 -KeepProject` from your source
+checkout after installing stack2rules. It prints the temporary output path
+for inspection. Omit `-KeepProject` to clean up its temporary files afterward.
+
 The [Next.js example](examples/nextjs/CLAUDE.example.md) includes dedicated
 Next.js, React, Tailwind CSS and TypeScript guidance. For example:
 

@@ -39,6 +39,10 @@ jobs:
         run: python -S -m unittest discover -s tests -v
       - name: Check installed entry point
         run: stack2rules --help
+      - name: Run PowerShell mixed-stack demo
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: ./scripts/test-demo.ps1
       - name: Verify committed examples
         run: python scripts/check_examples.py
       - name: Build wheel
