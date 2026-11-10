@@ -26,7 +26,14 @@ The [release workflow](https://github.com/Shadowsama20/stack2rules/actions/runs/
 successfully built, verified and published v1.0.0 from commit
 `a323fe8f01d8ebcefafe3938dacbd5d052c0ca25`. The tag points to that tested commit.
 The release includes a wheel, source distribution and SHA256SUMS.txt.
-PyPI publication, download counts and external adoption are not claimed.
+PyPI publication succeeded on 2026-11-10 through Trusted Publishing.
+A clean virtual environment installed version 1.0.0 directly from PyPI, with
+hash verification. The CLI generated the expected mixed Python/Node rules,
+preserved existing output, and declared no runtime dependencies. Both PyPI
+asset hashes match the tested GitHub release. Download counts and external
+adoption are not claimed.
+
+[Successful publishing run](https://github.com/Shadowsama20/stack2rules/actions/runs/42646725605)
 
 CI action pins were verified against upstream release pages:
 

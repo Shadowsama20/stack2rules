@@ -31,9 +31,17 @@ changes before pushing and wait for the new commit's CI. Never retag an existing
 release to different source. If publication fails, inspect the workflow logs
 and any draft release before retrying.
 
-## PyPI is separate
+## PyPI publication
 
-This GitHub release does not publish to PyPI. Verify package-name availability
-and configure the appropriate PyPI account or Trusted Publisher before adding
-a registry publishing workflow. Do not claim `pip install stack2rules` works
-until the intended package has actually been published there.
+Version 1.0.0 was published on 2026-11-10 at
+https://pypi.org/project/stack2rules/1.0.0/.
+
+The `.github/workflows/pypi.yml` workflow downloads the tested GitHub release
+assets, verifies their pinned SHA-256 hashes and publishes through PyPI Trusted
+Publishing. Its publisher uses owner `Shadowsama20`, repository `stack2rules`,
+workflow `pypi.yml` and environment `pypi`; no manually stored API token is needed.
+
+This workflow is scoped to version 1.0.0. For a future release, update the
+version, asset filenames and verified checksums before running it. Do not rerun
+it merely to replace an existing PyPI file. Check publication status after any
+partial failure before retrying.

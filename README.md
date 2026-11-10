@@ -4,7 +4,7 @@ Generate a stack-specific `CLAUDE.md` by running one command in a project root.
 No prompts, accounts, API calls, telemetry, or runtime dependencies.
 
 **Release status:** [v1.0.0 is available](https://github.com/Shadowsama20/stack2rules/releases/tag/v1.0.0)
-with an installable wheel and source archive. PyPI publication is pending.
+with an installable wheel and source archive. Also available on [PyPI](https://pypi.org/project/stack2rules/).
 This is an independent community tool, not an Anthropic product.
 See the [validation record](VALIDATION.md) for checks actually run.
 
@@ -16,6 +16,14 @@ Requires **Python 3.11+**. Parsing uses standard-library `json`, `re` and
 `setuptools.build_meta` packaging backend.
 
 ## Install and run
+
+Install the published package into an activated Python 3.11+ virtual environment:
+
+```sh
+python -m pip install stack2rules
+stack2rules --help
+```
+
 
 From this tool's source directory, preferably inside a virtual environment:
 

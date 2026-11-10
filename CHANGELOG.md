@@ -10,4 +10,5 @@
   examples and a GitHub Actions test/build workflow.
 
 GitHub release published with a wheel, source archive and checksums.
-PyPI publication and downstream adoption are not claimed.
+Published to PyPI on 2026-11-10 using the same verified release assets.
+Downstream adoption is not claimed.
